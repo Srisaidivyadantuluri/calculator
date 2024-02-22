@@ -1,6 +1,10 @@
 let operator="";
 let firstNumber="";
 let secondNumber="";
+
+
+
+
 function appendNumber(num){
    if(operator===""){
     firstNumber+=num;
@@ -10,6 +14,8 @@ function appendNumber(num){
     secondNumber+=num;
     document.getElementById("result").value=secondNumber;
    }
+   
+
 }
 function setOperator(op){
     operator=op;    
@@ -29,12 +35,12 @@ function calculate(){
         case '/':
             result=parseInt(firstNumber)/parseInt(secondNumber);
             break;
+        }
+        document.getElementById("result").value=result;
     }
-    document.getElementById("result").value=result;
-}
-function clearresult(){
-    operator="";
- firstNumber="";
- secondNumber="";
- document.getElementById("result").value="";
-}
+    function clearresult(){
+        operator="";
+     firstNumber="";
+     secondNumber="";
+     document.getElementById("result").value="";
+    }
